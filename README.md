@@ -3,11 +3,27 @@ A custom React toolchain
 
 # Table of Contents
 
+- [Important!](#important!)
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Dependencies](#dependencies)
 - [Credits](#credits)
 - [License](#license)
+
+# Important!
+
+Currently, react-launchpad uses the ```git clone --depth 1 https://github.com/tbsdvl/react-launchpad.git ${repoName}``` command during installation. Since this command will create a new cloned repository, you will need to remove the remote origin if you wish to add new react-launchpad apps to your own remote repositories.
+
+In your react-launchpad app's root directory, enter the following command into a git bash terminal:
+```git remote remove origin```
+
+This command will remove react-launchpad's remote origin from your local git repository.
+
+To add your own remote repository to your react-launchpad app, navigate to the app's root directory and enter the following command into a git bash terminal:
+```git remote add origin git@github.com:{your-username}/{name-of-remote-repository.git}```
+
+Be sure to exclude the curly braces around the names of your username and your remote github repository.
 
 # Description
 react-launchpad is a simple toolchain for building React JS applications with React-Bootstrap.
@@ -191,6 +207,18 @@ it('makes a request to the react website', async () => {
 jest will mock axios http requests, in this example it expects a response object from <a href="https://reactjs.org/">https://reactjs.org/</a>
 
 At your react-launchpad app's root directory, enter ```npm run test``` to run the test suites in your ```__tests__``` directory.
+
+# Dependencies
+
+react-launchpad currently includes the following dependencies.
+
+- @testing-library/jest-dom: 5.16.2 <a href="https://testing-library.com/docs/ecosystem-jest-dom/">https://testing-library.com/docs/ecosystem-jest-dom/</a>
+- @testing-library/react: 12.1.3 <a href="https://www.npmjs.com/package/@testing-library/react">https://www.npmjs.com/package/@testing-library/react</a>
+- axios: 0.26.0 <a href="https://axios-http.com/">https://axios-http.com/</a>
+- bootstrap: 5.1.3 <a href="https://getbootstrap.com/">https://getbootstrap.com/</a>
+- react: 17.0.2 <a href="https://reactjs.org/">https://reactjs.org/</a>
+- react-bootstrap: 2.2.0 <a href="https://react-bootstrap.github.io/">https://react-bootstrap.github.io/</a>
+- react-dom: 17.0.2 <a href="https://reactjs.org/docs/react-dom.html">https://reactjs.org/docs/react-dom.html</a>
 
 # Credits
 react-launchpad is built by Triston Burns.
