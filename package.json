@@ -1,15 +1,17 @@
 {
-  "name": "react-launchpad",
-  "version": "1.0.0",
+  "name": "@rlpd/create-react-launchpad-app",
+  "version": "1.0.4",
   "main": "index.js",
+  "description": "A simple, custom React toolchain for quickly deploying new React apps.",
+  "bin": "./bin/cli.js",
+  "author": "Triston Burns",
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development",
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
@@ -36,5 +38,8 @@
   "jest": {
     "setupFilesAfterEnv": ["./src/setupTests.js"] 
   },
-  "description": ""
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tbsdvl/react-launchpad"
+  }
 }
