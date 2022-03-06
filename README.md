@@ -83,7 +83,7 @@ npm start
 To restart your application on http://localhost:3000/
 
 You do not need to install additional dependencies like webpack or babel to run react-launchpad.
-These dependencies are already installed under devDependencies in the root directory's package.json.
+These dependencies are already included under devDependencies in the root directory's package.json.
 
 # Usage
 ### npm run build
