@@ -3,7 +3,7 @@ A custom React toolchain
 
 # Table of Contents
 
-- [Important!](#important!)
+- [Important](#important)
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
