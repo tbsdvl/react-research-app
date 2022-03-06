@@ -21,7 +21,7 @@ additional dependencies, babel loaders, and libraries as needed throughout devel
 
 # Installation
 To install react-launchpad, open a new git bash terminal and navigate 
-to the directory where you intend to store <br /> the new react-launchpad app.
+to the directory where you intend to store the new react-launchpad app.
 
 ### npx
 
@@ -83,7 +83,7 @@ npm start
 To restart your application on http://localhost:3000/
 
 You do not need to install additional dependencies like webpack or babel to run react-launchpad.
-<br /> These dependencies are already installed under devDependencies in the root directory's package.json.
+These dependencies are already installed under devDependencies in the root directory's package.json.
 
 # Usage
 ### npm run build
