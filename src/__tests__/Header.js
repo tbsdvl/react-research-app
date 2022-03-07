@@ -7,5 +7,5 @@
 
 it('checks for the app name text in the header compoent', () => {
     render(<Header />);
-    // expect(screen.getByText("App Name")).toBeInTheDocument();
+    expect(screen.getByText("App Name")).toBeInTheDocument();
 });
