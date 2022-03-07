@@ -7,5 +7,5 @@ import App from "../App.js";
 
 it('renders the App comoponent', () => {
     render(<App />);
-    expect(screen.getByText('Welcome to Launchpad App!')).toBeInTheDocument();
+        expect(screen.findByText("app")).not.toBe(null);
 });
