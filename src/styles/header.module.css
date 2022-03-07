@@ -13,3 +13,8 @@
     padding-top: 30px;
     font-size: 1.5rem;
 }
+
+.signin:hover {
+    text-decoration: underline;
+    color: #FBF6F3;
+}
