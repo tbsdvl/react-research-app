@@ -1,13 +1,14 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
-const Archive = ({ data }) => {
+const Article = ({ data }) => {
+    console.log(data);
 
     return (
         <Card>
-            {/* Put some p tags in here */}
+            {/* <p>{data.}</p> */}
         </Card>
     );
 };
 
-export default Archive;
+export default Article;
