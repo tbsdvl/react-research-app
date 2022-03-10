@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, FormGroup, FormLabel } from "react-bootstrap";
 import { handleSearchQuery } from "./handlers";
-import CreateArchiveButton from "../CreateArchiveButton";
+import SearchButton from "../SearchButton";
 
 const SearchBar = ({ results, setResults }) => {
     const [query, setQuery] = useState("");
@@ -18,7 +18,7 @@ const SearchBar = ({ results, setResults }) => {
                     />
                 </FormGroup>
             </Form>
-            <CreateArchiveButton query={query} setResults={setResults} />
+            <Search query={query} setResults={setResults} />
         </section>
     );
 };
