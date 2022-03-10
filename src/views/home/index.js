@@ -23,7 +23,7 @@ const Home = () => {
         <div className={styles.login}>
             <Header />
             <div className="d-flex flex-column justify-content-end m-3 bg-light">
-                <h1 className={styles.signup_title}>{'Sign up & access 389,000,000+ articles'}</h1>
+                <h1 className={styles.signup_title}>{'Search 389,000,000+ articles'}</h1>
                 <SearchBar results={results} setResults={setResults} />
                 <section className="d-flex flex-row justify-content-around" id="article-archives">
                     <Articles results={results} setResults={setResults} />
