@@ -4,6 +4,6 @@ import axios from 'axios';
 export default {
 
     getResults: async (q = null) => {
-        return axios.get(`https://serpapi.com/search.json?engine=google&q=${q}&api_key=${process.env.API_KEY}`);
+        return axios.get(`https://scholar.google.com/scholar?q=${q}}`);
     }
 };
