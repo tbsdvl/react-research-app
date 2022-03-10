@@ -18,7 +18,7 @@ const SearchBar = ({ results, setResults }) => {
                     />
                 </FormGroup>
             </Form>
-            <Search query={query} setResults={setResults} />
+            <SearchButton query={query} setResults={setResults} />
         </section>
     );
 };
