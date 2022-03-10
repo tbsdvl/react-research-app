@@ -10,15 +10,12 @@ const SearchBar = ({ results, setResults }) => {
         <section id="search">
             <Form>
                 <FormGroup className="mb-3" controlId="formBasicSearchBar">
-                    <FormLabel>Search Bar</FormLabel>
+                    <FormLabel>Search Google Scholar</FormLabel>
                     <Form.Control
                         type="text"
                         placeholder="Search for articles..."
                         onChange={async (e) => handleSearchQuery(e, query, setQuery)}
                     />
-                    <Form.Text>
-                        Search Google Scholar
-                    </Form.Text>
                 </FormGroup>
             </Form>
             <CreateArchiveButton query={query} setResults={setResults} />
