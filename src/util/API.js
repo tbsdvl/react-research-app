@@ -4,6 +4,6 @@ import axios from 'axios';
 export default {
 
     getResults: async (q = null) => {
-        return axios.get(`https://serpapi.com/search.json?engine=google_scholar?q=${q}&api_key=012c5e9936708f7bb8bfc559a890a5ddc15133a1e8a8fa3285e4bd7f057052a2`);
+        return axios.get(`https://api.dp.la/v2/items?q=${q}&api_key=fa052df87aa5de7a30a9eb0353d0affc`);
     }
 };
