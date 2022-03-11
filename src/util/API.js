@@ -12,5 +12,16 @@ export default {
     },
     getArchives: async () => {
         return axios.get('http://localhost:8080/archive');
+    },
+    saveToArchive: async (article, archive) => {
+        const articleData = {
+            archiveId: archive.archiveId,
+            title: article.title,
+            link: article.url,
+            snippet: article.as_html,
+            summary: article.bookshelves
+        };
+
+        return axios.post('http://localhost:8080/article', articleData);
     }
 };

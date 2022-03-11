@@ -14,9 +14,15 @@ const Home = () => {
     useEffect(async () => {
         if (archives.length === 0) {
             const fromDBArchives = await API.getArchives();
+            console.log(fromDBArchives);
             setArchives(fromDBArchives.data);
             return;
-        }
+        } 
+        // else {
+            // const fromDBArchives = await API.getArchives();
+            // setArchives(fromDBArchives.data);
+            // return;
+        // }
 
     }, [archives, results, count]);
 

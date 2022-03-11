@@ -4,7 +4,7 @@ import { Dropdown,  } from "react-bootstrap";
 import API from "../../util/API";
 
 
-const SaveToArchiveButton = ({archives}) => {
+const SaveToArchiveButton = ({article, archives}) => {
 
     return (
         <Dropdown>
@@ -16,7 +16,16 @@ const SaveToArchiveButton = ({archives}) => {
             {
                 archives.length > 0 ?
                 archives.map(archive => {
-                    return  <Dropdown.Item key={archives.indexOf(archive)} href={archives.indexOf(archive)}>{archive.archiveName}</Dropdown.Item>
+                    return  (
+                    <Dropdown.Item
+                        key={archives.indexOf(archive)} 
+                        href={archives.indexOf(archive)}
+                        onClick={async () => await API.saveToArchive(article, archive)}
+                        >
+                            {archive.archiveName}
+                
+                    </Dropdown.Item>
+                    )
                 })
                 :
                 null
