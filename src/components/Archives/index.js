@@ -5,10 +5,8 @@ import Archive from "../Archive";
 import styles from "../../styles/home.module.css";
 
 
-const Archives = ({ archives, setArchives }) => {
+const Archives = ({ archives, setArchives, load }) => {
     const [name, setName] = useState("");
-
-    console.log(archives);
 
     if (archives.length === 0) {
         return (
@@ -25,7 +23,7 @@ const Archives = ({ archives, setArchives }) => {
                         />
                     </FormGroup>
                 </Form>
-                <CreateArchiveButton name={name} />
+                <CreateArchiveButton name={name} archives={archives} setArchives={setArchives}/>
             </div>
         );
     } else {
@@ -43,7 +41,7 @@ const Archives = ({ archives, setArchives }) => {
                         />
                     </FormGroup>
                 </Form>
-                <CreateArchiveButton name={name} />
+                <CreateArchiveButton name={name} archives={archives} setArchives={setArchives}/>
                 <ListGroup>
                     {
                         archives.length > 0 ? archives.map(archive => {

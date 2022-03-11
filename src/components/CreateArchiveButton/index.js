@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
-// import { Button } from "react-bootstrap";
-// import { handleSearchAPIRequest } from "./handlers";
 import API from "../../util/API";
 
 
-const CreateArchiveButton = ({ name }) => {
+const CreateArchiveButton = ({ name, archives, setArchives }) => {
 
     return (
         <button
             type="submit"
-            onClick={async () => await API.createArchive({ archiveName: name, articles: [] })}
+            onClick={async () => {
+                await API.createArchive({ archiveName: name, articles: [] });
+                const newArchives = await API.getArchives();
+                setArchives(newArchives.data);
+            }}
         >
             Create Archive
         </button>
