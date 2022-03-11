@@ -5,7 +5,6 @@ import SearchBar from '../../components/SearchBar';
 import Articles from '../../components/Articles';
 import Archives from '../../components/Archives';
 import API from "../../util/API";
-import CreateArchiveButton from '../../components/CreateArchiveButton';
 
 const Home = () => {
     const [results, setResults] = useState([]);
@@ -18,7 +17,6 @@ const Home = () => {
             setArchives(fromDBArchives.data);
             return;
         } else if (archives.length !== fromDBArchives.data.length) {
-            archives = fromDBArchives.data;
             setArchives(fromDBArchives.data);
             return;
         };
@@ -32,7 +30,6 @@ const Home = () => {
                 <SearchBar results={results} setResults={setResults} count={count} setCount={setCount} />
                 <section className="d-flex flex-row justify-content-around" id="article-archives">
                     <Articles results={results} setResults={setResults} count={count} setCount={setCount} archives={archives} />
-                    <Archives archives={archives} setArchives={setArchives} />
                 </section>
             </div>
         </div>
