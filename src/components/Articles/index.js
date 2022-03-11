@@ -4,10 +4,11 @@ import Article from "../Article";
 import styles from "../../styles/home.module.css";
 
 const Articles = ({ results, setResults, count, setCount }) => {
+    console.log(results);
 
     return (
         <div id="books">
-            <h1 className={styles.signup_title}>Articles</h1>
+            <h1 className={styles.signup_title}>Books</h1>
             <ListGroup className="d-flex flex-column justify-content-around">
                 {
                     results.map(article => {

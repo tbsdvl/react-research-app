@@ -11,11 +11,7 @@ const Home = () => {
     const [count, setCount] = useState(10);
 
     useEffect(async () => {
-        if (archives.length > 0) {
-            return
-        } else if (results.length === 0) {
-            return;
-        };
+        
     }, [archives, results, count]);
 
     console.log(results, archives);
@@ -24,8 +20,8 @@ const Home = () => {
         <div className={styles.login}>
             <Header />
             <div className="d-flex flex-column justify-content-end m-3 bg-light">
-                <h1 className={styles.signup_title}>{'Search 389,000,000+ articles'}</h1>
-                <SearchBar results={results} setResults={setResults} />
+                <h1 className={styles.signup_title}>{'Search 3000+ books'}</h1>
+                <SearchBar results={results} setResults={setResults} count={count} setCount={setCount} />
                 <section className="d-flex flex-row justify-content-around" id="article-archives">
                     <Articles results={results} setResults={setResults} count={count} setCount={setCount} />
                     <Archives archives={archives} setArchives={setArchives} />
