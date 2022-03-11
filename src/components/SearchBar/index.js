@@ -13,7 +13,7 @@ const SearchBar = ({ results, setResults, count, setCount }) => {
                     <FormLabel>Search Gutenberg API</FormLabel>
                     <Form.Control
                         type="text"
-                        placeholder="Search for articles..."
+                        placeholder="Search for books..."
                         onChange={async (e) => handleSearchQuery(e, query, setQuery)}
                     />
                 </FormGroup>

@@ -1,8 +1,8 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Dropdown } from "react-bootstrap";
+import SaveToArchiveButton from "../SaveToArchiveButton";
 
-const Article = ({ data }) => {
-    console.log(data);
+const Article = ({ data, archives }) => {
 
     return (
         <Card>
@@ -17,6 +17,7 @@ const Article = ({ data }) => {
                 <a href={data.url} target="_blank">Find {data.title} on Gutenberg Project</a>
                 <a href={data.as_html} target="_blank">Read {data.title} as html</a>
             </Card.Body>
+            <SaveToArchiveButton article={data} archives={archives} />
         </Card>
     );
 };
