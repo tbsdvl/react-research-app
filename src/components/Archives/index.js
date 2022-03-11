@@ -20,7 +20,7 @@ const Archives = ({ archives, setArchives }) => {
                         <FormLabel>Create A New Archive</FormLabel>
                         <Form.Control
                             type="text"
-                            placeholder="Search for articles..."
+                            placeholder="Archive name..."
                             onChange={async (e) => setName(e.target.value)}
                         />
                     </FormGroup>
@@ -38,7 +38,7 @@ const Archives = ({ archives, setArchives }) => {
                         <FormLabel>Create A New Archive</FormLabel>
                         <Form.Control
                             type="text"
-                            placeholder="Search for articles..."
+                            placeholder="Archive name..."
                             onChange={async (e) => setName(e.target.value)}
                         />
                     </FormGroup>

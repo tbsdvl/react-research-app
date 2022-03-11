@@ -5,31 +5,26 @@ import SearchBar from '../../components/SearchBar';
 import Articles from '../../components/Articles';
 import Archives from '../../components/Archives';
 import API from "../../util/API";
+import CreateArchiveButton from '../../components/CreateArchiveButton';
 
 const Home = () => {
     const [results, setResults] = useState([]);
-    const [archives, setArchives] = useState([]);
+    const [archives, setArchives] = useState(false);
     const [count, setCount] = useState(10);
 
     useEffect(async () => {
-        if (archives.length === 0) {
-            const fromDBArchives = await API.getArchives();
-            console.log(fromDBArchives);
+        const fromDBArchives = await API.getArchives();
+        if (!archives) {
             setArchives(fromDBArchives.data);
             return;
-        } 
-        // else {
-            // const fromDBArchives = await API.getArchives();
-            // setArchives(fromDBArchives.data);
-            // return;
-        // }
-
+        } else if(archives.length !== fromDBArchives.data.length) {
+            archives = fromDBArchives.data;
+            setArchives(fromDBArchives.data);
+            return;
+        };
     }, [archives, results, count]);
 
-    console.log(results, archives);
-
-
-    if (archives.length === 0) {
+    if (!archives) {
         return (<div className={styles.login}>
             <Header />
             <div className="d-flex flex-column justify-content-end m-3 bg-light">
@@ -37,6 +32,7 @@ const Home = () => {
                 <SearchBar results={results} setResults={setResults} count={count} setCount={setCount} />
                 <section className="d-flex flex-row justify-content-around" id="article-archives">
                     <p>Waiting for archives</p>
+                    <Articles results={results} setResults={setResults} count={count} setCount={setCount} archives={archives} />
                 </section>
             </div>
         </div>
