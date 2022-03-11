@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, FormGroup, FormLabel } from "react-bootstrap";
 import SearchButton from "../SearchButton";
 import { handleSearchQuery } from "./handlers";
 
-const SearchBar = ({ results, setResults }) => {
+const SearchBar = ({ results, setResults, count, setCount }) => {
     const [query, setQuery] = useState("");
 
     return (
         <section id="search">
             <Form>
                 <FormGroup className="mb-3" controlId="formBasicSearchBar">
-                    <FormLabel>Search Google Scholar</FormLabel>
+                    <FormLabel>Search Gutenberg API</FormLabel>
                     <Form.Control
                         type="text"
                         placeholder="Search for articles..."
@@ -18,7 +18,7 @@ const SearchBar = ({ results, setResults }) => {
                     />
                 </FormGroup>
             </Form>
-            <SearchButton query={query} setResults={setResults} />
+            <SearchButton query={query} setResults={setResults} results={results} count={count} setCount={setCount}/>
         </section>
     );
 };

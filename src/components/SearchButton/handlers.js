@@ -12,6 +12,7 @@ export const handleSearchAPIRequest = async (query = null, setResults) => {
         } else {
             const resultsFromQuery = await API.getResults(query[""]);
             console.log(resultsFromQuery);
+            setResults(resultsFromQuery.data);
         };
     } catch (e) {
         console.log(e);
