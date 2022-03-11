@@ -11,7 +11,7 @@ export default {
         return axios.post(`https://tcb-archives.herokuapp.com/archive`, archive);
     },
     getArchives: async () => {
-        return axios.get('http://tcb-archives.herokuapp.com/archive');
+        return axios.get('https://tcb-archives.herokuapp.com/archive');
     },
     saveToArchive: async (article, archive) => {
         const articleData = {
@@ -22,6 +22,6 @@ export default {
             summary: article.bookshelves
         };
 
-        return axios.post('http://tcb-archives.herokuapp.com/article', articleData);
+        return axios.post('https://tcb-archives.herokuapp.com/article', articleData);
     }
 };

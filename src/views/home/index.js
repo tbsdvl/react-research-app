@@ -17,7 +17,7 @@ const Home = () => {
         if (!archives) {
             setArchives(fromDBArchives.data);
             return;
-        } else if(archives.length !== fromDBArchives.data.length) {
+        } else if (archives.length !== fromDBArchives.data.length) {
             archives = fromDBArchives.data;
             setArchives(fromDBArchives.data);
             return;
@@ -31,8 +31,8 @@ const Home = () => {
                 <h1 className={styles.signup_title}>{'Search 3000+ books'}</h1>
                 <SearchBar results={results} setResults={setResults} count={count} setCount={setCount} />
                 <section className="d-flex flex-row justify-content-around" id="article-archives">
-                    <p>Waiting for archives</p>
                     <Articles results={results} setResults={setResults} count={count} setCount={setCount} archives={archives} />
+                    <Archives archives={archives} setArchives={setArchives} />
                 </section>
             </div>
         </div>
