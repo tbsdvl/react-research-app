@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { handleSearchAPIRequest } from "./handlers";
+import API from "../../util/API.js";
 
-
-const CreateArchiveButton = ({ query, setResults }) => {
+const SearchButton = ({ query, setResults }) => {
 
     return (
         <Button
@@ -15,4 +15,4 @@ const CreateArchiveButton = ({ query, setResults }) => {
     );
 };
 
-export default CreateArchiveButton;
+export default SearchButton;
