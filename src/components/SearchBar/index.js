@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, FormGroup, FormLabel } from "react-bootstrap";
-import { handleSearchQuery } from "./handlers";
 import SearchButton from "../SearchButton";
+import { handleSearchQuery } from "./handlers";
 
 const SearchBar = ({ results, setResults }) => {
     const [query, setQuery] = useState("");
