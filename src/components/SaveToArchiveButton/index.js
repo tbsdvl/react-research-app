@@ -19,7 +19,6 @@ const SaveToArchiveButton = ({article, archives}) => {
                     return  (
                     <Dropdown.Item
                         key={archives.indexOf(archive)} 
-                        href={"#archive"}
                         onClick={async () => await API.saveToArchive(article, archive)}
                         >
                             {archive.archiveName}

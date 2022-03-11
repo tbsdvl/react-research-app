@@ -22,6 +22,8 @@ export default {
             summary: article.bookshelves
         };
 
+        console.log(articleData);
+
         return axios.post('https://tcb-archives.herokuapp.com/article', articleData);
     }
 };
