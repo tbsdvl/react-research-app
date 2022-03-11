@@ -8,10 +8,10 @@ export default {
         return axios.get(`https://tcb-gutenberg-api.herokuapp.com/search/${q}`);
     },
     createArchive: async (archive) => {
-        return axios.post(`http://localhost:8080/archive`, archive);
+        return axios.post(`https://tcb-archives.herokuapp.com/archive`, archive);
     },
     getArchives: async () => {
-        return axios.get('http://localhost:8080/archive');
+        return axios.get('http://tcb-archives.herokuapp.com/archive');
     },
     saveToArchive: async (article, archive) => {
         const articleData = {
@@ -22,6 +22,6 @@ export default {
             summary: article.bookshelves
         };
 
-        return axios.post('http://localhost:8080/article', articleData);
+        return axios.post('http://tcb-archives.herokuapp.com/article', articleData);
     }
 };
