@@ -3,7 +3,7 @@ import { ListGroup, ListGroupItem, Button } from "react-bootstrap";
 import Article from "../Article";
 import styles from "../../styles/home.module.css";
 
-const Articles = ({ results, setResults, count, setCount }) => {
+const Articles = ({ results, setResults, count, setCount, archives }) => {
     console.log(results);
 
     return (
@@ -16,7 +16,7 @@ const Articles = ({ results, setResults, count, setCount }) => {
                         if (results.indexOf(article) <= count) {
                             return (
                                 <ListGroupItem className="bg-light w-50" key={results.indexOf(article)}>
-                                    <Article data={article} />
+                                    <Article data={article} archives={archives} />
                                 </ListGroupItem>
                             );
                         } else {

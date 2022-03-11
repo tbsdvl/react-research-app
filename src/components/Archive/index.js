@@ -1,11 +1,12 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, } from "react-bootstrap";
+import SaveToArchiveButton from "../SaveToArchiveButton";
 
 const Archive = ({ data }) => {
 
     return (
         <Card>
-            {/* Put some p tags in here */}
+            <p>{data.archiveName}</p>
         </Card>
     );
 };
