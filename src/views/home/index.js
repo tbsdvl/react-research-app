@@ -8,14 +8,15 @@ import Archives from '../../components/Archives';
 const Home = () => {
     const [results, setResults] = useState([]);
     const [archives, setArchives] = useState([]);
+    const [count, setCount] = useState(10);
 
     useEffect(async () => {
-        if(archives.length > 0) {
+        if (archives.length > 0) {
             return
         } else if (results.length === 0) {
             return;
         };
-    }, [archives, results]);
+    }, [archives, results, count]);
 
     console.log(results, archives);
 
@@ -26,7 +27,7 @@ const Home = () => {
                 <h1 className={styles.signup_title}>{'Search 389,000,000+ articles'}</h1>
                 <SearchBar results={results} setResults={setResults} />
                 <section className="d-flex flex-row justify-content-around" id="article-archives">
-                    <Articles results={results} setResults={setResults} />
+                    <Articles results={results} setResults={setResults} count={count} setCount={setCount} />
                     <Archives archives={archives} setArchives={setArchives} />
                 </section>
             </div>
